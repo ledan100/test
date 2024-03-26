@@ -1,63 +1,84 @@
-const cocktailCardsElement = document.getElementById('cocktailCards');
-const searchInputElement = document.getElementById('searchInput');
+const btnBurger = document.querySelector('#menu-burger');
+const nav = document.querySelector('.navigation');
+const header = document.querySelector('nav');
+const linkNav = document.querySelectorAll('.navigation a');
+const sections = document.querySelectorAll('section');
 
-// Fonction pour obtenir les cocktails depuis l'API
-async function getCocktails() {
-  try {
-    const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
-    const data = await response.json();
-    return data.drinks;
-  } catch (error) {
-    console.log('Erreur lors de la récupération des cocktails:', error);
+btnBurger.addEventListener('click', ()=> {
+  nav.classList.toggle('active');
+  btnBurger.classList.toggle('bx-x')
+  if(window.scrollY == 0){
+    header.classList.toggle('active')
   }
-}
+});
 
-// Fonction pour afficher les cocktails sous forme de cartes
-function displayCocktails(cocktails) {
-  cocktailCardsElement.innerHTML = '';
-
-  if (cocktails) {
-    cocktails.forEach(cocktail => {
-      const card = document.createElement('div');
-      card.classList.add('card');
-
-      const image = document.createElement('img');
-      image.src = cocktail.strDrinkThumb;
-      image.alt = cocktail.strDrink;
-
-      const name = document.createElement('h3');
-      name.textContent = cocktail.strDrink;
-
-      card.appendChild(image);
-      card.appendChild(name);
-
-      cocktailCardsElement.appendChild(card);
-    });
-  } else {
-    const message = document.createElement('p');
-    message.textContent = 'Aucun cocktail trouvé.';
-    cocktailCardsElement.appendChild(message);
-  }
-}
-
-// Fonction de recherche de cocktail
-function searchCocktails() {
-  const searchTerm = searchInputElement.value.trim();
-
-  getCocktails().then(cocktails => {
-    if (searchTerm !== '') {
-      const filteredCocktails = cocktails.filter(cocktail => {
-        return cocktail.strDrink.toLowerCase().includes(searchTerm.toLowerCase());
-      });
-      displayCocktails(filteredCocktails);
-    } else {
-      displayCocktails(cocktails);
-    }
+linkNav.forEach(link => {
+  link.addEventListener('click', ()=> {
+    nav.classList.remove('active');
+    btnBurger.classList.remove('bx-x')
   });
+})
+
+window.addEventListener('scroll', ()=> {
+  header.classList.toggle('active', window.scrollY > 0)
+});
+
+const scrollActive = ()=> {
+  sections.forEach(section => {
+    let top = window.scrollY;
+    let offset = section.offsetTop - 500;
+    let height = section.offsetHeight;
+    let id = section.getAttribute('id');
+
+    if(top >= offset && top < offset + height){
+      linkNav.forEach(link => {
+        link.classList.remove('link-active')
+        document.querySelector(`.navigation a[href*=${id}]`).classList.add('link-active')
+      })
+    }
+  })
 }
 
-// Écouteur d'événement pour la recherche
-searchInputElement.addEventListener('input', searchCocktails);
+window.addEventListener('scroll', scrollActive);
 
-// Chargement initial des cocktails
-getCocktails().then(displayCocktails);
+
+
+
+var swiper = new Swiper(".home", {
+  spaceBetween: 50,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  }
+});
+
+
+
+var swiper = new Swiper('.coming-container', {
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 55000,
+    disabledOnInteraction: false,
+  },
+  centeredSlides: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    568: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    968: {
+      slidesPerView: 5,
+    }
+  }
+})
