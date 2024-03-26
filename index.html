@@ -4,274 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
-    <title>Site</title>
+    <title>CAFEMK</title>
 </head>
 <body>
-    
 
 
-    <nav >
-        <a href="#" class="logo"><i class='bx bxs-camera-movie'></i></a>
-        <ul class="navigation">
-            <li><a href="#home" class="link-active">Home</a></li>
-            <li><a href="#movies" >Films</a></li>
-            <li><a href="#coming" >À venir</a></li>
-            <li><a href="#newsletter" >Newsletter</a></li>
+    <nav>
+        <a href="#" class="logo">
+            <i class='bx bxs-coffee-togo'></i>
+        </a>
+        <ul class="navbar">
+            <li><a href="#home  ">Home</a></li>
+            <li><a href="#about  ">À propos</a></li>
+            <li><a href="#products  ">Produits</a></li>
+            <li><a href="#reviews  ">Avis</a></li>
         </ul>
-        <a href="#" class="btn">Connexion</a>
-        <div class="bx bx-menu" id="menu-burger"></div>
+        <div class="nav-icons">
+            <i class='bx bxs-cart'></i>
+            <i id="search-icon" class='bx bx-search-alt-2' ></i>
+            <i id="burger" class='bx bx-menu' ></i>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Que recherchez-vous ?">
+        </div>
     </nav>
+    
+  
 
-   
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>L'Art du Café <br> Explorez l'Élixir de l'Éveil</h1>
+            <p>Savourez l'Instant, Découvrez l'Histoire : Plongez dans le monde du café</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+        <div class="home-img">
+            <img src="./images/home.png" alt="">
+        </div>
+    </section>
 
-    <section class="home swiper" id="home">
-        <div class="swiper-wrapper">
 
-            <div class="swiper-slide slide-box">
-                <img src="./images/home-01-avengers.jpg" alt="">
-                <div class="slide-box-content">
-                    <span>Avengers</span>
-                    <h1>Ultimatum Cosmique</h1>
-                    <a href="#" class="btn">Voir fiche</a>
-                    <a href="#" class="play"><i class='bx bx-play-circle' ></i></a>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./images/about.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2>Notre Histoire</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima omnis officiis consequatur beatae nisi vel quo culpa tenetur quod ullam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolore aliquam, et consectetur fugit ea!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sequi adipisci earum culpa accusamus ipsa eum ea tempora itaque ipsum!</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="section-heading">
+            <h2>Nos produits</h2>
+        </div>
+        <div class="products-container">
+
+            <div class="card">
+                <img src="./images/cof-01.png" alt="">
+                <h3>Arabica</h3>
+                <div class="card-content">
+                    <span>30€</span>
+                    <a href="#" class="btn">Ajouter au panier</a>
                 </div>
             </div>
-            <div class="swiper-slide slide-box">
-                <img src="./images/home-02-skyscraper.jpg" alt="">
-                <div class="slide-box-content">
-                    <span>Skyscraper</span>
-                    <h1>Au-dela des Nuages</h1>
-                    <a href="#" class="btn">Voir fiche</a>
-                    <a href="#" class="play"><i class='bx bx-play-circle' ></i></a>
+
+            <div class="card">
+                <img src="./images/cof-02.png" alt="">
+                <h3>Arabica</h3>
+                <div class="card-content">
+                    <span>30€</span>
+                    <a href="#" class="btn">Ajouter au panier</a>
                 </div>
             </div>
-            <div class="swiper-slide slide-box">
-                <img src="./images/home-03-mortal-kombat.jpg" alt="">
-                <div class="slide-box-content">
-                    <span>Mortl Kombat</span>
-                    <h1>Le Tournois de l'Éternité</h1>
-                    <a href="#" class="btn">Voir fiche</a>
-                    <a href="#" class="play"><i class='bx bx-play-circle' ></i></a>
+
+            <div class="card">
+                <img src="./images/cof-03.png" alt="">
+                <h3>Arabica</h3>
+                <div class="card-content">
+                    <span>30€</span>
+                    <a href="#" class="btn">Ajouter au panier</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/cof-04.png" alt="">
+                <h3>Arabica</h3>
+                <div class="card-content">
+                    <span>30€</span>
+                    <a href="#" class="btn">Ajouter au panier</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/cof-05.png" alt="">
+                <h3>Arabica</h3>
+                <div class="card-content">
+                    <span>30€</span>
+                    <a href="#" class="btn">Ajouter au panier</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/cof-06.png" alt="">
+                <h3>Arabica</h3>
+                <div class="card-content">
+                    <span>30€</span>
+                    <a href="#" class="btn">Ajouter au panier</a>
                 </div>
             </div>
 
         </div>
-        <div class="swiper-pagination"></div>
     </section>
 
 
 
 
-    <section class="movies" id="movies">
-        <h2 class="section-heading">Les plus populaires</h2>
+    <section id="reviews" class="reviews">
+        <div class="section-heading">
+            <h2>Vos avis</h2>
+        </div>
+        <div class="reviews-container">
 
-        <div class="movies-container">
-
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-01.jpg" alt="">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
                 </div>
-                <h3>Aquaman</h3>
-                <span>140 min | Action</span>
+                <p>GET OVER HERE.</p>
+                <h4>Scorpion</h4>
+                <img src="./images/scorpion.jpg" alt="">
             </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-02.jpg" alt="">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
                 </div>
-                <h3>Black Panther</h3>
-                <span>140 min | Action</span>
+                <p>I iced your blood.</p>
+                <h4>Subzéro</h4>
+                <img src="./images/subzéro.png" alt="">
             </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-03.jpg" alt="">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
                 </div>
-                <h3>Avengers</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-04.jpg" alt="">
-                </div>
-                <h3>Spider-Man</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-05.jpg" alt="">
-                </div>
-                <h3>Shang-Chi</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-06.jpg" alt="">
-                </div>
-                <h3>Thor</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-07.jpg" alt="">
-                </div>
-                <h3>Quantumania</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-08.jpg" alt="">
-                </div>
-                <h3>Black Widow</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-09.jpg" alt="">
-                </div>
-                <h3>Harry Potter</h3>
-                <span>140 min | Action</span>
-            </div>
-            <div class="card-movies">
-                <div class="card-movies-img">
-                    <img src="./images/film-10.jpg" alt="">
-                </div>
-                <h3>Harry Potter</h3>
-                <span>140 min | Action</span>
+                <p>There are fates worse than death.</p>
+                <h4>Raiden</h4>
+                <img src="./images/raiden.jpg" alt="">
             </div>
 
 
         </div>
-
     </section>
-
-
-    <section class="coming" id="coming">
-        <h2 class="section-heading">Prochainement</h2>
-
-        <div class="coming-container swiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-1.jpg" alt="">
-                   </div>
-                   <h3>Harry Potter</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-2.jpg" alt="">
-                   </div>
-                   <h3>Mercredi</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-3.jpg" alt="">
-                   </div>
-                   <h3>Scream IV</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-4.jpg" alt="">
-                   </div>
-                   <h3>The Last Of US</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-5.jpg" alt="">
-                   </div>
-                   <h3>Babylon</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-6.jpg" alt="">
-                   </div>
-                   <h3>Mario</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-7.jpg" alt="">
-                   </div>
-                   <h3>Blood</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-8.jpg" alt="">
-                   </div>
-                   <h3>Barbi</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-9.jpg" alt="">
-                   </div>
-                   <h3>Miraculous</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-                <div class="swiper-slide card-movies">
-                   <div class="card-movies-img">
-                    <img src="./images/m-10.jpg" alt="">
-                   </div>
-                   <h3>Une année difficle</h3>
-                   <span>140 min | Action</span>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <section id="newsletter" class="newsletter">
-        <h2>Inscrivez-vous à la <br> <span>Newsletter</span></h2>
-
-        <form action="#">
-            <input type="text" class="email" required placeholder="Indiquez votre email">
-            <input type="submit" value="S'inscrire" class="btn">
-        </form>
-    </section>
-
-
 
 
     <footer>
-        <a href="#" class="logo">
-            <i class="bx bxs-camera-movie"></i>
-        </a>
-        <div class="social">
-            <a href="#"><i class='bx bxl-facebook' ></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
-            <a href="#"><i class='bx bxl-youtube' ></i></a>
-            <a href="#"><i class='bx bxl-twitter' ></i></a>
+        <div class="footer-box">
+            <h5>     <i class='bx bxs-coffee-togo'></i> COFFEE</h5>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h5>Support</h5>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Aides et support</a></li>
+            <li><a href="#">Politique d'utilisation</a></li>
+            <li><a href="#">Mentions légales</a></li>
+        </div>
+        <div class="footer-box">
+            <h5>Guide</h5>
+            <li><a href="#">Nos locaux</a></li>
+            <li><a href="#">Recrutements</a></li>
+            <li><a href="#">Partennaires</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Évènements</a></li>
+        </div>
+        <div class="footer-box">
+            <h5>Contact</h5>
+            <div class="contact">
+                <span><i class='bx bx-map' ></i>17, Rue de Valmy, Fonds Cacao, Capesterre-Belle-Eau 97130, Guadeloupe</span>
+                <span><i class='bx bxs-phone' ></i>059030178532</span>
+                <span><i class='bx bxs-envelope' ></i> cafemortalkombat@gmail.com</span>
+            </div>
         </div>
     </footer>
-
-
     <div class="copy">
-        <p>&copy; de chez moi - 2024</p>
+        <p>&copy; 2023 - La minute de code - Tous droits réservés</p>
     </div>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
